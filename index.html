@@ -4,7 +4,17 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>The Hamlin Cup · 6v6 in Horizon West · Fall 2026</title>
-<meta name="description" content="A 6v6 soccer tournament in Horizon West, Florida. Fall 2026. Join the waitlist." />
+<meta name="description" content="Horizon West's inaugural 6v6 adult soccer tournament. Teams of eight, one weekend, three guaranteed games. Fall 2026." />
+<meta property="og:title" content="The Hamlin Cup · Fall 2026" />
+<meta property="og:description" content="Horizon West's inaugural 6v6 adult soccer tournament. Grab your squad." />
+<meta property="og:image" content="https://grove-soccer.vercel.app/og.png" />
+<meta property="og:url" content="https://grove-soccer.vercel.app" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Grove Soccer Co." />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="The Hamlin Cup · Fall 2026" />
+<meta name="twitter:description" content="Horizon West's inaugural 6v6 adult soccer tournament. Grab your squad." />
+<meta name="twitter:image" content="https://grove-soccer.vercel.app/og.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
 <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
@@ -117,7 +127,7 @@
   }
   h1{
     font-family:'Syne',sans-serif;font-weight:800;
-    font-size:clamp(3.4rem,9.5vw,7.6rem);
+    font-size:clamp(2.6rem,9vw,7.6rem);
     line-height:.92;letter-spacing:-.035em;
     color:var(--ink);margin-bottom:2rem;
   }
@@ -212,9 +222,22 @@
   .fine{margin-top:1rem;font-size:.85rem;color:var(--ink-soft);line-height:1.55}
 
   @media (max-width:880px){
-    .hero-row{grid-template-columns:1fr;gap:32px}
-    .hero-mark{width:clamp(180px, 50vw, 280px);margin:0 auto}
-    main.hero{min-height:auto;padding:3rem 0}
+    main.hero{min-height:auto;padding:2rem 0 3.5rem}
+    .headline-row{
+      grid-template-columns:1fr;
+      row-gap:24px;margin-bottom:1.5rem;
+    }
+    .hero-mark{
+      width:clamp(160px,42vw,240px);
+      margin:0 auto;order:-1;
+    }
+    .sub-row{
+      grid-template-columns:1fr;
+      row-gap:24px;
+    }
+    .sub-row .cta-btn{
+      width:auto;align-self:flex-start;padding:1rem 1.5rem;
+    }
     .waitlist-inner{grid-template-columns:1fr;gap:32px}
   }
 
@@ -239,12 +262,19 @@
 
   @media (max-width:560px){
     header .inner,footer .inner{padding:0 1.4rem}
-    .nav-meta{display:none}
-    main{padding:3rem 0 4rem}
-    .details{grid-template-columns:1fr;gap:1rem;text-align:left}
+    .nav-meta{font-size:1rem}
+    main.hero{padding:1.5rem 0 3rem}
+    .wrap-wide{padding:0 24px}
+    .presents{font-size:1.3rem;margin-bottom:1rem}
+    h1{margin-bottom:1.5rem}
+    h1::after{margin-top:1.25rem;width:72px;height:3px}
+    .sub{font-size:1.05rem}
+    .details{grid-template-columns:1fr;gap:.75rem;text-align:left;padding:1rem 0}
+    .details .k{margin-bottom:.25rem}
     form{flex-direction:column;border-radius:8px}
-    form button{padding:1rem}
-    footer .inner{flex-direction:column;align-items:flex-start;text-align:left}
+    form button{padding:1rem;border-top:1px solid var(--ink)}
+    footer .inner{flex-direction:column;align-items:flex-start;text-align:left;gap:.75rem}
+    .built-by{text-align:left}
   }
 </style>
 </head>
