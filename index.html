@@ -100,6 +100,7 @@
     display:inline-block;white-space:nowrap;
   }
   .nav-meta .o{color:var(--accent);margin:0 .1em}
+  .nav-mark{display:none;width:36px;height:36px;object-fit:contain}
 
   /* ---------- HERO ---------- */
   main.hero{
@@ -222,39 +223,25 @@
   .fine{margin-top:1rem;font-size:.85rem;color:var(--ink-soft);line-height:1.55}
 
   @media (max-width:880px){
+    .nav-meta{display:none}
+    .nav-mark{display:block}
     main.hero{
-      min-height:100vh;min-height:100svh;
-      padding:2rem 0 2rem;
-      display:flex;align-items:stretch;
-    }
-    main.hero > .wrap-wide{
-      display:flex;flex-direction:column;align-items:stretch;
-      flex:1;min-height:0;
+      min-height:auto;
+      padding:2.25rem 0 3.5rem;
+      display:block;
     }
     .headline-row,.sub-row{display:contents}
-    .presents{order:0;margin-bottom:1.25rem}
+    .presents{margin-bottom:1.25rem}
     h1{
-      order:1;
       font-size:clamp(2.8rem,15.5vw,5.2rem);
       line-height:1.0;letter-spacing:-.04em;
-      margin-bottom:0;
+      margin-bottom:1.5rem;
       overflow-wrap:normal;word-break:normal;hyphens:none;
     }
-    h1::after{margin-top:1.5rem;width:72px;height:3px}
-    .sub{
-      order:2;margin-top:auto;margin-bottom:1.5rem;
-      max-width:none;padding-top:0;
-    }
-    .sub-row .cta-btn{
-      order:3;width:auto;align-self:flex-start;
-      padding:1.1rem 1.6rem;
-    }
-    .hero-mark{
-      order:99;
-      display:block;
-      width:clamp(110px,22vw,150px);
-      margin:auto auto 0;opacity:.9;
-    }
+    h1::after{margin-top:0;margin-bottom:1.75rem;width:72px;height:3px}
+    .sub{margin-bottom:2rem;max-width:none}
+    .sub-row .cta-btn{width:auto;align-self:flex-start;padding:1.1rem 1.6rem}
+    .hero-mark{display:none}
     .waitlist-inner{grid-template-columns:1fr;gap:32px}
   }
 
@@ -301,6 +288,7 @@
   <div class="inner">
     <a href="#" class="mark">Grove Soccer Co.</a>
     <div class="nav-meta">Horizon West, FL</div>
+    <img src="grove-mark.png" alt="" class="nav-mark" aria-hidden="true" />
   </div>
 </header>
 <div class="ribbon" aria-hidden="true"></div>
