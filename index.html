@@ -236,22 +236,24 @@
     h1{
       order:1;
       font-size:clamp(2.8rem,15.5vw,5.2rem);
-      line-height:.92;letter-spacing:-.04em;
-      margin-bottom:1.5rem;
+      line-height:1.0;letter-spacing:-.04em;
+      margin-bottom:0;
       overflow-wrap:normal;word-break:normal;hyphens:none;
     }
     h1::after{margin-top:1.5rem;width:72px;height:3px}
-    .sub{order:2;margin-bottom:1.75rem;max-width:none}
+    .sub{
+      order:2;margin-top:auto;margin-bottom:1.5rem;
+      max-width:none;padding-top:2rem;
+    }
     .sub-row .cta-btn{
       order:3;width:auto;align-self:flex-start;
-      padding:1.1rem 1.6rem;
+      padding:1.1rem 1.6rem;margin-bottom:2rem;
     }
     .hero-mark{
       order:99;
       display:block;
       width:clamp(110px,22vw,150px);
-      margin:auto auto 0;
-      opacity:.9;
+      margin:0 auto;opacity:.9;
     }
     .waitlist-inner{grid-template-columns:1fr;gap:32px}
   }
