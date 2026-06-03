@@ -223,12 +223,13 @@
 
   @media (max-width:880px){
     main.hero{
-      min-height:auto;
-      padding:2rem 0 3.5rem;
-      display:block;
+      min-height:100vh;min-height:100svh;
+      padding:2rem 0 2rem;
+      display:flex;align-items:stretch;
     }
     main.hero > .wrap-wide{
       display:flex;flex-direction:column;align-items:stretch;
+      flex:1;min-height:0;
     }
     .headline-row,.sub-row{display:contents}
     .presents{order:0;margin-bottom:1.25rem}
@@ -249,7 +250,7 @@
       order:99;
       display:block;
       width:clamp(110px,22vw,150px);
-      margin:3.5rem auto 0;
+      margin:auto auto 0;
       opacity:.9;
     }
     .waitlist-inner{grid-template-columns:1fr;gap:32px}
