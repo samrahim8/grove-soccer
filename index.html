@@ -223,20 +223,17 @@
 
   @media (max-width:880px){
     main.hero{min-height:auto;padding:2rem 0 3.5rem}
-    .headline-row{
-      grid-template-columns:1fr;
-      row-gap:24px;margin-bottom:1.5rem;
+    main.hero > .wrap-wide{display:flex;flex-direction:column}
+    .headline-row,.sub-row{display:contents}
+    h1{order:1;margin-bottom:1.25rem}
+    .sub{order:2;margin-bottom:1.5rem}
+    .sub-row .cta-btn{
+      order:3;width:auto;align-self:flex-start;padding:1rem 1.5rem;
     }
     .hero-mark{
-      width:clamp(160px,42vw,240px);
-      margin:0 auto;order:-1;
-    }
-    .sub-row{
-      grid-template-columns:1fr;
-      row-gap:24px;
-    }
-    .sub-row .cta-btn{
-      width:auto;align-self:flex-start;padding:1rem 1.5rem;
+      order:99;
+      width:clamp(180px,46vw,260px);
+      margin:2rem auto 0;
     }
     .waitlist-inner{grid-template-columns:1fr;gap:32px}
   }
@@ -262,7 +259,8 @@
 
   @media (max-width:560px){
     header .inner,footer .inner{padding:0 1.4rem}
-    .nav-meta{font-size:1rem}
+    .nav-meta{display:none}
+    .mark{white-space:nowrap;font-size:.85rem;letter-spacing:.12em}
     main.hero{padding:1.5rem 0 3rem}
     .wrap-wide{padding:0 24px}
     .presents{font-size:1.3rem;margin-bottom:1rem}
